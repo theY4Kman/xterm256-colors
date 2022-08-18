@@ -1,4 +1,4 @@
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 from .colors import Back256, Fore256, XtermCodes, XtermColor
 from .utils import (
