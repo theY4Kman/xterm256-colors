@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+## [0.1.0] — 2022-08-18
 ### Added
  - Added `Fore256` and `Back256` classes for controlling foreground/background color
  - Added utilities for printing colours in various formats
