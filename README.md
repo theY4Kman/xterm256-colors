@@ -1,5 +1,7 @@
 # xterm256-colors
 
+[![PyPI version](https://badge.fury.io/py/xterm256-colors.svg)](https://badge.fury.io/py/xterm256-colors)
+
 Easily colorize text printed to an xterm-256color terminal emulator
 
 ```python
