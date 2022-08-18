@@ -6,6 +6,13 @@ readme = "README.md"
 homepage = "https://github.com/theY4Kman/xterm256-colors"
 repository = "https://github.com/theY4Kman/xterm256-colors"
 authors = ["Zach \"theY4Kman\" Kanzler <they4kman@gmail.com>"]
+license = "MIT"
+
+packages = [
+  { include = "xterm256_colors" },
+  { include = "LICENSE", format = "sdist" },
+  { include = "CHANGELOG.md", format = "sdist" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
