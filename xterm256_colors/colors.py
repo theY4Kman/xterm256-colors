@@ -76,7 +76,8 @@ class XtermColor(str):
         else:
             return f'{self}{s}{RESET_ALL}'
 
-    def reset(self) -> str:
+    @staticmethod
+    def reset() -> str:
         """Print the reset-all-styles escape sequence"""
         return RESET_ALL
 
