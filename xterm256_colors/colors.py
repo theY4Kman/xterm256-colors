@@ -38,7 +38,9 @@ class _XtermColorSwatch:
     def __format__(self, format_spec) -> str:
         return format(str(self), format_spec)
 
-    def __call__(self, n: int = 3, c: str = '█'):
+    def __call__(self, n: int = 3, c: str | None = None):
+        if c is None:
+            c = ' ' if self.color.is_background else '█'
         return self.color(c * n)
 
 

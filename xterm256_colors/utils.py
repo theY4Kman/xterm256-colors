@@ -22,7 +22,10 @@ __all__ = [
 def print_colors(colors: Iterable[XtermColor]):
     """Print swatch, code, and name for each of the specified colours"""
     for color in colors:
-        print(color.swatch, color(f'{color.code:>4d} {color.name}'))
+        label = f'{color.code:>4d} {color.name}'
+        if color.is_background and color.is_bright:
+            label = Fore256.BLACK(label)
+        print(color.swatch, color(label))
 
 
 def print_all_colors(codes: XtermCodes = Fore256):

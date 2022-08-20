@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Changed
+ - Improve display of background color swatches
+
 ### Fixed
  - Resolve incorrect typing for color members on Fore256/Back256
 
