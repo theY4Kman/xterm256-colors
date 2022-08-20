@@ -3,11 +3,14 @@ from __future__ import annotations
 import colorsys
 import functools
 import math
-from typing import Type, cast
+from typing import TYPE_CHECKING, Type, cast
 
-from ._compat import LabColor, convert_color, requires_colormath, sRGBColor
+from ._compat import requires_colormath
 from .constants import CMDNUM_BACKGROUND, CSI, CMDNUM_FOREGROUND, RESET_ALL
 from .types import NOTSET
+
+if TYPE_CHECKING:
+    from ._compat import LabColor, sRGBColor
 
 __all__ = [
     'XtermColor',
@@ -138,6 +141,7 @@ class XtermColor(str):
     @functools.cached_property  # type: ignore[misc]
     @requires_colormath
     def as_lab_color(self) -> LabColor:
+        from ._compat import convert_color
         return convert_color(self.as_srgb_color, LabColor)
 
 
