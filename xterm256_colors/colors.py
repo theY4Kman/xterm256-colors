@@ -134,11 +134,11 @@ class XtermColor(str):
 
     @functools.cached_property
     def is_bright(self) -> bool:
-        return self.perceived_brightness >= 0.5
+        return self.perceived_brightness >= 0.42  # hand-picked value
 
     @functools.cached_property
     def is_dark(self) -> bool:
-        return self.perceived_brightness < 0.5
+        return not self.is_bright
 
     @functools.cached_property  # type: ignore[misc]
     @requires_colormath

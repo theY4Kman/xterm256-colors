@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Changed
+ - Tune `is_bright` to a more acceptable value
 
 
 ## [0.1.4] — 2022-08-21
