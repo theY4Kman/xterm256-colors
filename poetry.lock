@@ -33,7 +33,7 @@ name = "colormath"
 version = "3.0.0"
 description = "Color math and conversion library."
 category = "main"
-optional = true
+optional = false
 python-versions = "*"
 
 [package.dependencies]
@@ -87,7 +87,7 @@ name = "networkx"
 version = "2.8.5"
 description = "Python package for creating and manipulating graphs and networks"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.8"
 
 [package.extras]
@@ -102,7 +102,7 @@ name = "numpy"
 version = "1.23.2"
 description = "NumPy is the fundamental package for array computing with Python."
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.8"
 
 [[package]]
@@ -169,6 +169,14 @@ tomli = ">=1.0.0"
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-assert-utils"
+version = "0.3.1"
+description = "Useful assertion utilities for use with pytest"
+category = "dev"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
 name = "pytest-camel-collect"
 version = "1.0.2"
 description = "Enable CamelCase-aware pytest class collection"
@@ -226,7 +234,7 @@ colormath = ["colormath"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "4ea5d9b74cd5c023c3b51a3ce40599eb2ad649c320e5ec83c24bdefe916bd3fe"
+content-hash = "0ea316ee201e2962bf6afa35a30727378e8234c8242a042703d929b64017fd0c"
 
 [metadata.files]
 atomicwrites = [
@@ -330,6 +338,10 @@ pyparsing = [
 pytest = [
     {file = "pytest-7.1.2-py3-none-any.whl", hash = "sha256:13d0e3ccfc2b6e26be000cb6568c832ba67ba32e719443bfe725814d3c42433c"},
     {file = "pytest-7.1.2.tar.gz", hash = "sha256:a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"},
+]
+pytest-assert-utils = [
+    {file = "pytest-assert-utils-0.3.1.tar.gz", hash = "sha256:a8600b666430764eb7a486de3b21af5542425eb5bd211f6eb1ea30930691812b"},
+    {file = "pytest_assert_utils-0.3.1-py3-none-any.whl", hash = "sha256:f4d7fa44506c1ed65eb5369100476d74d5d8a86400c4862eab3ea0e9521a22dd"},
 ]
 pytest-camel-collect = []
 pytest-lambda = [

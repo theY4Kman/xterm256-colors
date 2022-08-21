@@ -32,6 +32,12 @@ class _XtermColorSwatch:
     def __init__(self, color: 'XtermColor'):
         self.color = color
 
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, _XtermColorSwatch):
+            return False
+
+        return self.color == other.color
+
     def __str__(self) -> str:
         return self()
 
@@ -87,11 +93,11 @@ class XtermColor(str):
 
     @functools.cached_property
     def r(self) -> int:
-        return (self.rgb >> 24) & 0xFF
+        return (self.rgb >> 16) & 0xFF
 
     @functools.cached_property
     def g(self) -> int:
-        return (self.rgb >> 16) & 0xFF
+        return (self.rgb >> 8) & 0xFF
 
     @functools.cached_property
     def b(self) -> int:
@@ -137,12 +143,13 @@ class XtermColor(str):
     @functools.cached_property  # type: ignore[misc]
     @requires_colormath
     def as_srgb_color(self) -> sRGBColor:
+        from ._compat import sRGBColor
         return sRGBColor(self.red, self.green, self.blue)
 
     @functools.cached_property  # type: ignore[misc]
     @requires_colormath
     def as_lab_color(self) -> LabColor:
-        from ._compat import convert_color
+        from ._compat import convert_color, LabColor
         return convert_color(self.as_srgb_color, LabColor)
 
 
