@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+
+## [0.1.4] — 2022-08-21
 ### Fixed
  - Fix red/green color components returning incorrect values (this led to `hsv`, `is_greyscale`, `perceived_brightness`, and all other derivative properties being incorrect...)
  - Resolve `NameError` in `as_srgb_color` and `as_lab_color` when colormath _was_ installed
